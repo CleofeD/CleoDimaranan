@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Management Agent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+img {
+  border-radius: 50%;
+}
+ header {
+            background-color: #333;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+		height:10%;
+		top:20px;
+            z-index: 1000;
+}
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: Fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+ 
+        nav {
+            top: 0px; /* Adjusted top position to avoid overlapping with the header */
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 25px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 60px 20px 20px; /* Adjusted padding to account for the fixed header and nav */
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .property-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .property-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #home {
+            margin-top: 120px;
+        }
+	
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Real Estate Management</h1>
+    </header>
+
+   <nav>
+        <a href="#home" onclick="scrollToSection('home')">Home</a>
+        <a href="#about" onclick="scrollToSection('about')">About</a>
+        <a href="#properties" onclick="scrollToSection('properties')">Properties</a>
+        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to our Real Estate Management Website</h1>
+      <div id="myDIV"><p>Welcome to Our Real Estate Management, where we redefine the meaning of <b>"HOME"</b>. As a trusted leader in Real Estate Management, we understand that home is more than just a physical space; it's where your dreams unfold and your memories are created. Our commitment is to provide unparalleled service in managing and maintaining your property, ensuring that your investment thrives and your living experience exceeds expectations.</p><br>
+
+ <section id="agents">
+        <h2>Meet Our Agent</h2>
+
+        <div class="agent-profile">
+            <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.15752-9/407234445_373169691957268_7295894798769196977_n.png?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeH6og2qsQJXhVpWNoF2NpMMNrK-dqGriYo2sr52oauJimRD_UbuL0tmEnq9wtipXkQJ5nzjKXPfVKFTiuCA_c8h&_nc_ohc=B5AHOB7YhPwAX8yh8_z&_nc_ht=scontent.fmnl13-1.fna&oh=03_AdTddglQQ5vlvy2wQL1L1Y8y_RAtXq5-vLsVo7R6zuS9uw&oe=65A304FA"  width="100"  height="100" img align="left" alt="Agent 1">
+            <div class="agent-details">
+                <h3>Cleofe Javier Dimaranan</h3>
+                <p>Email: <a href="mailto:dimaranancleofe@gmail.com">  dimaranancleofe@gmail.com</a></p>
+                <p>Phone:  09478896941</p>
+            </div>
+        </div>
+
+       
+
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+
+
+ <div id="myDIV"><p>At Our Real Estate Management, we understand that effective real estate management goes beyond the basics. It requires a keen understanding of market trends, a proactive approach to property maintenance, and a dedication to maximizing returns on investment. Our team of seasoned professionals brings a wealth of experience to the table, ensuring that your real estate assets are not only well-maintained but also strategically positioned for long-term success.What sets us apart is our client-centric philosophy. We prioritize open communication and collaboration, working closely with property owners to tailor our services to their unique needs and objectives. Whether you're a seasoned investor looking to optimize your portfolio or a first-time property owner seeking guidance, we have the knowledge and resources to guide you every step of the way.</p>
+ <div id="myDIV"><p>We embrace innovation in real estate management. Leveraging cutting-edge technology and industry best practices, we streamline processes, enhance efficiency, and stay ahead of the curve to provide our clients with a competitive edge in the dynamic real estate market.Our commitment extends beyond managing properties; it encompasses fostering thriving communities. We believe in creating spaces that people are proud to call home and that investors are confident to include in their portfolios. Trust Our Real Estate Management for comprehensive real estate management solutions that exceed expectations and redefine industry standards. Welcome to a partnership built on trust, transparency, and unparalleled expertise. </p>
+    </section>
+
+    <section id="properties">
+        <h2>Available Properties</h2>
+        <ul class="property-list" id="propertyList">
+            
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+                const properties = [
+            { id: 1, name: 'Burbank Village Inner', LotArea: '36 sqm', FloorArea:'44 sqm', TCP:'1,293,480',DC:'50,000', NetTCP:'1,243,480',Reservation:'3,300', Equity:'100,480 payable', ThirtyMonths:'3,349.33', Loanable:'1,140,000', Thirtyyrs:'7,555,52', BSL:'21,587.20' },
+	    { id: 2, name: 'Burbank Village End', LotArea: '54 sqm', FloorArea:'44 sqm', TCP:'1,611,000',DC:'50,000', NetTCP:'1,561,000',Reservation:'5,300', Equity:'251,000 payable', ThirtyMonths:'8,366.67', Loanable:'1,305,000', Thirtyyrs:'8,628.05', BSL:'24,651.57' },
+	   { id: 3, name: 'Burbank Village Corner', LotArea: '70 sqm', FloorArea:'44 sqm', TCP:'1,954,680',DC:'50,000', NetTCP:'1,904,680',Reservation:'5,300', Equity:'504,680 payable', ThirtyMonths:'16,822,67', Loanable:'1,395.00', Thirtyyrs:'9,210.24', BSL:'26,314.97' },
+
+
+
+           
+        ];
+
+       
+        function displayProperties() {
+            const propertyList = document.getElementById('propertyList');
+
+         
+            propertyList.innerHTML = '';
+
+           
+            properties.forEach(property => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('property-item');
+                listItem.innerHTML = `
+                    <h2>${property.name}</h2>
+                  	 <p><b>Lot Area:</b> ${property.LotArea}</p>
+			<p><b>Floor Area:</b> ${property.FloorArea}</p>
+			<p><b>Total Contact Price:</b> ${property.TCP}</p>
+			<p><b>Dicount:</b> ${property.DC}</p>
+			<p><b>Net TCP:</b> ${property.NetTCP}</p>
+			<p><b>Reservation:</b> ${property.Reservation}</p>
+			<p><b>Equity:</b> ${property.Equity}</p>
+			<p><b>30 Months:</b> ${property.ThirtyMonths}</p>
+			<p><b>Loanable:</b> ${property.Loanable}</p>
+			<p><b>30 Years:</b> ${property.Thirtyyrs}</p>
+			<p><b>Basic Salary:</b> ${property.BSL}</p>
+			
+	
+                    <button onclick="buyProperty(${property.id})">Buy Now</button>
+                `;
+                propertyList.appendChild(listItem);
+            });
+        }
+
+       
+        function buyProperty(propertyId) {
+            alert(`Congratulations! Property ${propertyId} has been purchased.`);
+           
+        }
+
+        
+        displayProperties();
+
+       
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+           
+            alert(`Form submitted!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        });
+ 
+        
+</script>
+</body>
+</html>
